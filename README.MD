@@ -1,1 +1,2 @@
-# A collection/analysis of sorting algorithms
+# A Collection of Sorting Algorthims
+## + Analysis
