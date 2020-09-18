@@ -38,18 +38,15 @@ int test_sorter(sort_function sort, char *func_name)
 	int scores_sorted[] = {1, 4, 8, 12, 15, 17, 19, 19};
 	int num_scores = 8;
 	int flag = 0;
+	
+	char *statuses[] = {"✔", "✘"};
 
 	sort(scores, num_scores);
 
 	for (int i = 0; i < num_scores; i++)
-		flag += scores[i] != scores_sorted[i];
+		flag |= (scores[i] != scores_sorted[i]);
 
-	if (flag)
-		printf("✘");
-	else
-		printf("✔");
-
-	printf(" %s\n", func_name);
+	printf("%s %s\n", statuses[flag], func_name);
 
 	return flag;
 }
