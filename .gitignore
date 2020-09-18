@@ -1,1 +1,6 @@
+# debug symbols
 *.dSYM/
+
+# executables
+test_sorters
+main
