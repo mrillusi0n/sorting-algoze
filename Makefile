@@ -6,4 +6,4 @@ test_sorters: test.c sort_functions.h src/*.c
 	$(CC) $(CFLAGS) -o test_sorters test.c $(SORT_FUNCTION_IMPLS)
 
 clean:
-	rm main test_sorters
+	rm -f main test_sorters
