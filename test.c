@@ -42,15 +42,9 @@ int test_sorter(sort_function sort, char *func_name)
 	sort(scores, num_scores);
 
 	for (int i = 0; i < num_scores; i++)
-	{
-		if (scores[i] != scores_sorted[i])
-		{
-			flag = -1;
-			break;
-		}
-	}
+		flag += scores[i] != scores_sorted[i];
 
-	if (flag == -1)
+	if (flag)
 		printf("✘");
 	else
 		printf("✔");
