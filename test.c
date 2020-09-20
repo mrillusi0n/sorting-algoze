@@ -6,6 +6,7 @@
 #include <string.h>
 #include "sort_functions.h"
 
+void print_arr(int *, int);
 typedef void (*sort_function)(int *, int);
 
 void (*SORT_FUNCTIONS[])(int *, int) = {
@@ -57,4 +58,13 @@ int main(int argc, char const *argv[])
 		test_sorter(SORT_FUNCTIONS[i], SORT_FUNCTION_NAMES[i]);
 
 	return 0;
+}
+
+void print_arr(int *nums, int size)
+{
+	printf("[");
+	for (int i = 0; i < size - 1; i++)
+		printf("%d, ", nums[i]);
+	if (size > 0) printf("%d", nums[size - 1]);
+	printf("]");
 }
