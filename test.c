@@ -58,8 +58,7 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
-void print_arr(int *nums, int size)
-{
+void print_arr(int *nums, int size) {
 	printf("[");
 	for (int i = 0; i < size - 1; i++)
 		printf("%d, ", nums[i]);
