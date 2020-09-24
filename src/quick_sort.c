@@ -1,4 +1,3 @@
-void quick_sort(int *nums, int size)
-{
+void quick_sort(int *nums, int size) {
 
 }

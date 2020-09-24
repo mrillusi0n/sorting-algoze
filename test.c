@@ -33,8 +33,7 @@ char *SORT_FUNCTION_NAMES[] = {
 	"radix_sort"
 };
 
-int test_sorter(sort_function sort, char *func_name)
-{
+int test_sorter(sort_function sort, char *func_name) {
 	int scores[] = {8, 12, 4, 1, 19, 19, 15, 17};
 	int scores_sorted[] = {1, 4, 8, 12, 15, 17, 19, 19};
 	int num_scores = 8;
@@ -52,8 +51,7 @@ int test_sorter(sort_function sort, char *func_name)
 	return flag;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
 	for (int i = 0; i < NUM_FUNCTIONS; i++)
 		test_sorter(SORT_FUNCTIONS[i], SORT_FUNCTION_NAMES[i]);
 
