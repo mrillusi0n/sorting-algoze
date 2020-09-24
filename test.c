@@ -39,14 +39,14 @@ int test_sorter(sort_function sort, char *func_name) {
 	int num_scores = 8;
 	int flag = 1;
 	
-	char *statuses[] = {"✘", "✔"};
+	char *status[] = {"✘", "✔"};
 
 	sort(scores, num_scores);
 
 	for (int i = 0; flag && (i < num_scores); i++)
 		flag &= (scores[i] == scores_sorted[i]);
 
-	printf("%s %s\n", statuses[flag], func_name);
+	printf("%s %s\n", status[flag], func_name);
 
 	return flag;
 }
