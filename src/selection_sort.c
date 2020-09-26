@@ -1,3 +1,5 @@
+#include "util.h"
+
 void selection_sort(int *nums, int size) {
 	for (int i = 0; i < size; i++) {
 		int min_index = i;
@@ -7,8 +9,6 @@ void selection_sort(int *nums, int size) {
 				min_index = j;
 		}
 
-		int temp = nums[i];
-		nums[i] = nums[min_index];
-		nums[min_index] = temp;
+		swap(nums + min_index, nums + i);
 	}
 }
