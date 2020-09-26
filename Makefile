@@ -1,9 +1,13 @@
-CC = gcc
-CFLAGS = -g -Wall
-SORT_FUNCTION_IMPLS = src/*
+CC      = gcc
+CFLAGS  = -g -Wall -Werror
 
-test_sorters: test.c sort_functions.h src/*.c
-	$(CC) $(CFLAGS) -o test_sorters test.c $(SORT_FUNCTION_IMPLS)
+SRC     = $(wildcard src/*.c)
+UTIL    = $(wildcard util/*.c)
+OBJ     = $(SRC:.c=.o) $(UTIL:.c=.o)
+
+
+test_sorters: test.c $(OBJ) $(UTIL)
+	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
-	rm -rf main test_sorters *.dSYM
+	rm -rf main test_sorters *.dSYM $(OBJ)
