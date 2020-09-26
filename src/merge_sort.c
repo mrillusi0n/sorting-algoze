@@ -1,4 +1,3 @@
-void merge_sort(int *nums, int size)
-{
+void merge_sort(int *nums, int size) {
 
 }

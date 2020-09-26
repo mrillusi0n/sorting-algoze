@@ -1,4 +1,3 @@
-void radix_sort(int *nums, int size)
-{
+void radix_sort(int *nums, int size) {
 
 }
