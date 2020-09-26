@@ -6,7 +6,7 @@ UTIL    = $(wildcard util/*.c)
 OBJ     = $(SRC:.c=.o) $(UTIL:.c=.o)
 
 
-test_sorters: test.c $(OBJ) $(UTIL)
+test_sorters: test.o $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
