@@ -43,7 +43,7 @@ int test_sorter(sort_function sort, char *func_name) {
 
 	sort(scores, num_scores);
 
-	for (int i = 0; flag && (i < num_scores); i++)
+	for (int i = 0; i < num_scores; i++)
 		flag &= (scores[i] == scores_sorted[i]);
 
 	printf("%s %s\n", status[flag], func_name);
@@ -63,5 +63,5 @@ void print_arr(int *nums, int size) {
 	for (int i = 0; i < size - 1; i++)
 		printf("%d, ", nums[i]);
 	if (size > 0) printf("%d", nums[size - 1]);
-	printf("]");
+	printf("]\n");
 }
