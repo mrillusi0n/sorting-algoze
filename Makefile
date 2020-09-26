@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -g -Wall -Werror
+CFLAGS  = -Wall -Werror
 
 SRC     = $(wildcard src/*.c)
 UTIL    = $(wildcard util/*.c)
