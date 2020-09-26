@@ -1,4 +1,4 @@
-#include "util.h"
+extern void swap(int *, int *);
 
 void selection_sort(int *nums, int size) {
 	for (int i = 0; i < size; i++) {
