@@ -1,12 +1,12 @@
-CC      = gcc
-CFLAGS  = -Wall -Werror
+CC      = clang
+CFLAGS  = -Wall -Werror -g
 
 SRC     = $(wildcard src/*.c)
 UTIL    = $(wildcard util/*.c)
 OBJ     = $(SRC:.c=.o) $(UTIL:.c=.o)
 
 
-test_sorters: test.o $(OBJ)
+test_sorters: test.c $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
