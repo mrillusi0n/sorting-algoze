@@ -34,9 +34,10 @@ char *SORT_FUNCTION_NAMES[] = {
 };
 
 int test_sorter(sort_function sort, char *func_name) {
-	int scores[] = {8, 12, 4, 1, 19, 19, 15, 17};
-	int scores_sorted[] = {1, 4, 8, 12, 15, 17, 19, 19};
-	int num_scores = 8;
+	int scores[] = {71, 88, 52, 47, 65, 24, 51, 12, 98, 25, 8, 15, 19, 86, 34, 99, 52, 33, 48, 14};
+	int scores_sorted[] = {8, 12, 14, 15, 19, 24, 25, 33, 34, 47, 48, 51, 52, 52, 65, 71, 86, 88, 98, 99};
+
+	int num_scores = 20;
 	int flag = 1;
 	
 	char *status[] = {"✘", "✔"};
