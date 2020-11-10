@@ -4,13 +4,15 @@ static int get_max_val(int *nums, int size) {
 	int max_val = nums[0];
 
 	for (int i = 1; i < size; i++)
-		max_val = (max_val < nums[i]) ? nums[i] : max_val;
+		if (nums[i] > max_val)
+			max_val = nums[i];
 
 	return max_val;
 }
 
 void counting_sort(int *nums, int size) {
 	int counter_size = get_max_val(nums, size) + 1;
+
 	int *counter = calloc(counter_size, sizeof(int));
 	int *final = malloc(sizeof(int) * size);
 
