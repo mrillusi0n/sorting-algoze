@@ -3,7 +3,7 @@
 static int get_max_val(int *nums, int size) {
 	int max_val = nums[0];
 
-	for (int i = 0; i < size; i++)
+	for (int i = 1; i < size; i++)
 		max_val = (max_val < nums[i]) ? nums[i] : max_val;
 
 	return max_val;
