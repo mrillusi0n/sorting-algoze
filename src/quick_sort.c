@@ -20,12 +20,11 @@ void _quick_sort(int *nums, int lo, int hi) {
 
 int _partition(int *nums, int lo, int hi) {
 	int pivot = nums[hi];
-
 	int i = lo - 1;
 
 	for (int j = lo; j < hi; j++) {
 		if (nums[j] < pivot)
-			swap(nums + j, nums + i++);
+			swap(nums + j, nums + ++i);
 	}
 
 	swap(nums + i + 1, nums + hi);
