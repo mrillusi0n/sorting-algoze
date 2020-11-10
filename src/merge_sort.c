@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-
 /* internal routines */
 static void _merge_sort(int *, int, int);
 static void _merge(int *, int, int, int);
