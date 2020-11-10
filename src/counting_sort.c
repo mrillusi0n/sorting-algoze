@@ -1,7 +1,5 @@
 #include <stdlib.h>
 
-void print_arr(int *, int);
-
 static int get_max_val(int *nums, int size) {
 	int max_val = nums[0];
 
