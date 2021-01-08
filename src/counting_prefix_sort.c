@@ -2,7 +2,7 @@
 
 extern int get_max(int *, int);
 
-void counting_sort(int *nums, int size) {
+void counting_prefix_sort(int *nums, int size) {
 	int counter_size = get_max(nums, size) + 1;
 
 	int *counter = calloc(counter_size, sizeof(int));
@@ -24,3 +24,4 @@ void counting_sort(int *nums, int size) {
 	for (int i = 0; i < size; i++)
 		nums[i] = final[i];
 }
+
