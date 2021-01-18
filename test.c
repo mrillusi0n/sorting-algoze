@@ -11,26 +11,26 @@ typedef void (*sort_function)(int *, int);
 
 void (*SORT_FUNCTIONS[])(int *, int) = {
 	bubble_sort,
-	selection_sort,
+	bucket_sort,
+	counting_sort,
 	insertion_sort,
 	merge_sort,
 	quick_sort,
-	bucket_sort,
-	counting_sort,
 	radix_sort
+	selection_sort,
 };
 
 int NUM_FUNCTIONS = 8;
 
 char *SORT_FUNCTION_NAMES[] = {
 	"bubble_sort",
-	"selection_sort",
+	"bucket_sort",
+	"counting_sort",
 	"insertion_sort",
 	"merge_sort",
 	"quick_sort",
-	"bucket_sort",
-	"counting_sort",
 	"radix_sort"
+	"selection_sort",
 };
 
 int test_sorter(sort_function sort, char *func_name) {
