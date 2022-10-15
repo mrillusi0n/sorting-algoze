@@ -16,7 +16,7 @@ void (*SORT_FUNCTIONS[])(int *, int) = {
 	insertion_sort,
 	merge_sort,
 	quick_sort,
-	radix_sort
+	radix_sort,
 	selection_sort,
 };
 
